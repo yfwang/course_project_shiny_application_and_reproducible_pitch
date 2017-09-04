@@ -1,0 +1,37 @@
+Shiny Application and Reproducible Pitch Presentation
+========================================================
+author: Thomas Wang
+date: 2017/9/4
+autosize: true
+
+Overview
+========================================================
+This application is built for the course Developing Data Porject as part of the course Data Science Specilization
+- The app is available at:
+https://yfwang.shinyapps.io/course_project_shiny_application_and_reproducible_pitch/
+
+- The source code can be found at:
+https://github.com/yfwang/course_project_shiny_application_and_reproducible_pitch
+
+
+
+Web application functionality
+========================================================
+This application is built for user to see a box-plot that explore the relationship between miles-per-gallon (MPG) and three toher variables (Cylinders, Transmission, and Gears). To do this we'll add selectInput to the slidebar. 
+
+Dataset summary
+========================================================
+
+```{r}
+summary(mtcars)
+```
+
+Slide With Plot
+========================================================
+
+```{r, echo=FALSE}
+par(mfrow=c(2,2))
+boxplot(data = mtcars, mpg~cyl)
+boxplot(data = mtcars, mpg~cyl)
+boxplot(data = mtcars, mpg~cyl)
+```
